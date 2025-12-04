@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0f0c29" />
+    <meta name="description" content="Sơn Cụ Entertainment – Oracle Tarot, AI Vision, Nano Banana Pro và hệ tiên tri hiện đại." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="The Oracle – Sơn Cụ Entertainment" />
+    <meta property="og:description" content="Ứng dụng Tarot & AI Vision hiện đại nhất Việt Nam – Powered by Gemini Pro 3." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- PWA Ready (optional nhưng nên có) -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/icons/icon-48.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
+
+    <title>Sơn Cụ Entertainment - The Oracle</title>
+
+    <!-- Google Fonts (tối ưu) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      /* TAILWIND CONFIG — GIỮ NHẸ, SẠCH */
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              oracle: {
+                dark: "#0f0c29",
+                purple: "#302b63",
+                gold: "#ffd700",
+                accent: "#24243e"
+              }
+            },
+            fontFamily: {
+              serif: ["Lora", "Georgia", "Cambria", "Times New Roman", "Times", "serif"],
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+            },
+            animation: {
+              "pulse-slow": "pulse 4s cubic-bezier(0.4,0,0.6,1) infinite",
+              "fade-in": "fadeIn 0.5s ease-out"
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: 0, transform: "translateY(10px)" },
+                "100%": { opacity: 1, transform: "translateY(0)" }
+              }
+            }
+          }
+        }
+      };
+    </script>
+
+    <style>
+      /* BASE LAYOUT */
+      body {
+        background: linear-gradient(180deg, #0f0c29, #302b63, #24243e);
+        background-attachment: fixed; /* Tối ưu GPU, đỡ nhấp nháy */
+        color: #e2e8f0;
+        min-height: 100vh;
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Lora", serif;
+      }
+
+      /* Optional: Ẩn scrollbars */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Glass Panel */
+      .glass-panel {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.09);
+      }
+
+      /* PRINT MODE */
+      @media print {
+        body {
+          background: white !important;
+          color: black !important;
+          -webkit-print-color-adjust: exact;
+        }
+        .no-print {
+          display: none !important;
+        }
+        .glass-panel {
+          background: none !important;
+          border: 1px solid #aaa !important;
+        }
+        * {
+          overflow: visible !important;
+        }
+        .page-break {
+          page-break-before: always !important;
+        }
+        .text-oracle-gold {
+          color: #c47c00 !important;
+        }
+      }
+    </style>
+
+    <!-- Import Map -->
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@19.2.0",
+    "react-dom": "https://aistudiocdn.com/react-dom@19.2.0",
+    "react-dom/client": "https://aistudiocdn.com/react-dom@19.2.0/client",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+
+    <!-- Fallback cho trình duyệt không hỗ trợ importmap -->
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+
+    <!-- Security Headers (client-side) -->
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=()" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
